@@ -1,0 +1,426 @@
+
+go
+
+go
+
+go
+
+go
+SELECT TOP 100 FID,FPushTypeID,FBillTypeID,FInterID,FEntryID,FStatus,FExtInfo
+FROM t_SuspendWorkPushQueue WITH(NOLOCK)
+ORDER BY FID ASC
+go
+
+go
+
+go
+
+go
+
+go
+exec sp_executesql N'select FValue, FReadonly from t_SystemProfile where FCategory = @P1 and FKey = @P2',N'@P1 varchar(30),@P2 varchar(30)','CA','Item_Material'
+go
+
+go
+
+go
+
+go
+
+go
+select FUserID from t_Group where FUserID = 16394 and FGroupID = 1
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+select FUserID from t_Group where FUserID = 16394 and FGroupID = 1
+go
+
+go
+
+go
+exec sp_executesql N'Select FValue From t_SystemProfile Where FCategory = @P1 And FKey = @P2',N'@P1 varchar(30),@P2 varchar(30)','Base','ItemShowCheckedOnly'
+go
+
+go
+
+go
+select FUserID from t_Group where FUserID = 16394 and FGroupID = 1
+go
+Select * From (Select t1.* From t_Item t1  WHERE t1.FDeleteD=0  And t1.FItemClassID = 4 And t1.FItemClassID = 4) i  Where 1=1  And (FNumber = '1')
+go
+
+go
+
+go
+select i.* from t_Item i where i.FItemID = 273
+go
+
+go
+
+go
+SELECT FValue FROM t_SystemProfile WHERE FCategory='Base' AND FKey='ItemClassID_4'
+go
+
+go
+
+go
+select FUserID from t_Group where FUserID = 16394 and FGroupID = 1
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+select FUserID from t_Group where FUserID = 16394 and FGroupID = 1
+go
+select FSQLTableName, FVersion from t_ItemClass where FItemClassID = 4
+go
+select * from t_ICItem where FItemID = 273
+go
+
+go
+
+go
+exec sp_executesql N'select FValue, FReadonly from t_SystemProfile where FCategory = @P1 and FKey = @P2',N'@P1 varchar(30),@P2 varchar(30)','IC','EnableEcnRight'
+go
+
+go
+exec sp_executesql N'
+Select * From t_ad_SystemProfile Where FKey=@P1 and FCategory=@P2',N'@P1 nvarchar(80),@P2 nvarchar(80)',N'CheckAuditLog',N'Base'
+go
+
+go
+
+go
+
+go
+
+go
+exec sp_executesql N'Select FValue From t_SystemProfile Where FCategory = @P1 And FKey = @P2',N'@P1 varchar(30),@P2 varchar(30)','StdCost','StdCostStart'
+go
+
+go
+
+go
+select FUserID from t_Group where FUserID = 16394 and FGroupID = 1
+go
+
+go
+
+go
+select FUserID from t_Group where FUserID = 16394 and FGroupID = 1
+go
+select FSQLTableName, FVersion,FImport,FGRType from t_ItemClass where FItemClassID = 4
+go
+select FItemClassID from t_ItemClass where FItemClassID = 4
+go
+Select FNumber from t_item where FItemClassID = 2001
+go
+exec sp_executesql N'select FItemID,FName, FLevel, FDetail,FParentID from t_Item where FItemClassID = 4 and FNumber = @P1',N'@P1 varchar(80)','1'
+go
+
+go
+
+go
+
+go
+Select newid() as UUID
+go
+exec sp_executesql N'SELECT FItemID FROM t_Item WHERE FItemClassID=@P1 AND FNumber=@P2',N'@P1 int,@P2 varchar(80)',4,'1.116543'
+go
+
+go
+
+go
+exec sp_executesql N'select FValue, FReadonly from t_SystemProfile where FCategory = @P1 and FKey = @P2',N'@P1 varchar(30),@P2 varchar(30)','Base','AutoNumbers'
+go
+SET NO_BROWSETABLE ON
+go
+SET FMTONLY ON SELECT FItemID FROM t_Item WHERE FItemClassID=0 AND FNumber=' ' SET FMTONLY OFF
+go
+SET NO_BROWSETABLE OFF
+go
+
+go
+
+go
+
+go
+
+go
+SELECT TOP 100 FID,FPushTypeID,FBillTypeID,FInterID,FEntryID,FStatus,FExtInfo
+FROM t_SuspendWorkPushQueue WITH(NOLOCK)
+ORDER BY FID ASC
+go
+
+go
+
+go
+exec sp_executesql N'INSERT INTO t_Item (FItemClassID,FParentID,FLevel,FName,FNumber,FShortNumber,FFullNumber,FDetail,UUID,FDeleted) VALUES (@P1,@P2,@P3,@P4,@P5,@P6,@P7,@P8,@P9,@P10)',N'@P1 int,@P2 int,@P3 smallint,@P4 varchar(255),@P5 varchar(80),@P6 varchar(80),@P7 varchar(80),@P8 bit,@P9 varchar(38),@P10 smallint',4,273,2,'uytr','1.116543','116543','1.116543',1,'C442D18F-B21E-4520-987E-2153A4E3DBD1',0
+go
+exec sp_executesql N'SELECT FItemID FROM t_Item WHERE FItemClassID=@P1 AND FNumber=@P2',N'@P1 int,@P2 varchar(80)',4,'1.116543'
+go
+SET NO_BROWSETABLE ON
+go
+SET FMTONLY ON select FItemID,FName, FLevel, FDetail,FParentID from t_Item where FItemClassID = 4 and FNumber = ' ' SET FMTONLY OFF
+go
+SET NO_BROWSETABLE OFF
+go
+select 1 from t_systemProfile Where (FCategory='OPCOST' Or FCategory='StdCOST') and FKey='Closed' And FValue=-1
+go
+
+go
+
+go
+select FSQLColumnName, FActualType, FActualSize, FDefaultValue, FViewMask, FName from t_ItemPropDesc where FItemClassID = 4
+go
+SELECT 1 FROM SYSOBJECTS t1 ,SYSCOLUMNS t2 WHERE t1.id=t2.id AND t1.Name = 't_ICItem' AND t2.Name='FShortNumber'
+go
+SELECT 1 FROM SYSOBJECTS t1 ,SYSCOLUMNS t2 WHERE t1.id=t2.id AND t1.Name = 't_ICItem' AND t2.Name='FNumber'
+go
+SELECT 1 FROM SYSOBJECTS t1 ,SYSCOLUMNS t2 WHERE t1.id=t2.id AND t1.Name = 't_ICItem' AND t2.Name='FName'
+go
+SELECT 1 FROM SYSOBJECTS t1 ,SYSCOLUMNS t2 WHERE t1.id=t2.id AND t1.Name = 't_ICItem' AND t2.Name='FParentID'
+go
+exec sp_executesql N'INSERT INTO t_ICItem (FHelpCode,FModel,FAuxClassID,FErpClsID,FTypeID,FUnitGroupID,FUnitID,FOrderUnitID,
+FSaleUnitID,FProductUnitID,FStoreUnitID,FSecUnitID,FSecCoefficient,FDefaultLoc,FSPID,FSource,FQtyDecimal,FLowLimit,
+FHighLimit,FSecInv,FUseState,FIsEquipment,FEquipmentNum,FIsSparePart,FFullName,FApproveNo,FAlias,FOrderRector,
+FPOHighPrice,FPOHghPrcMnyType,FWWHghPrc,FWWHghPrcMnyType,FSOLowPrc,FSOLowPrcMnyType,FIsSale,FProfitRate,FOrderPrice,
+FSalePrice,FIsSpecialTax,FISKFPeriod,FKFPeriod,FStockTime,FBatchManager,FBookPlan,FBeforeExpire,FCheckCycUnit,FOIHighLimit,
+FOILowLimit,FSOHighLimit,FSOLowLimit,FInHighLimit,FInLowLimit,FPickHighLimit,FPickLowLimit,FTrack,FPlanPrice,FPriceDecimal,
+FAcctID,FSaleAcctID,FCostAcctID,FAPAcctID,FAdminAcctID,FGoodSpec,FTaxRate,FCostProject,FIsSNManage,FCBRestore,FNote,
+FPlanTrategy,FPlanMode,FOrderTrategy,FFixLeadTime,FLeadTime,FTotalTQQ,FOrderInterVal,FQtyMin,FQtyMax,FBatchAppendQty,
+FOrderPoint,FBatFixEconomy,FBatChangeEconomy,FRequirePoint,FPlanPoint,FDefaultRoutingID,FDefaultWorkTypeID,FProductPrincipal,
+FPlanner,FIsBackFlush,FBackFlushStockID,FBackFlushSPID,FPutInteger,FDailyConsume,FMRPCon,FMRPOrder,FChartNumber,FIsKeyItem,
+FGrossWeight,FNetWeight,FMaund,FLength,FWidth,FHeight,FSize,FCubicMeasure,FStandardCost,FCBAppendRate,FCBAppendProject,
+FCostBomID,FCBRouting,FStdBatchQty,FStandardManHour,FStdPayRate,FChgFeeRate,FStdFixFeeRate,FOutMachFee,FOutMachFeeProject,
+FPieceRate,FPOVAcctID,FPIVAcctID,FMCVAcctID,FPCVAcctID,FSLAcctID,FCAVAcctID,FInspectionLevel,FProChkMde,FWWChkMde,FSOChkMde,
+FWthDrwChkMde,FStkChkMde,FOtherChkMde,FSampStdCritical,FSampStdStrict,FSampStdSlight,FStkChkPrd,FStkChkAlrm,FInspectionProject,
+FIdentifier,FVersion,FNameEn,FModelEn,FHSNumber,FExportRate,FFirstUnit,FSecondUnit,FImpostTaxRate,FConsumeTaxRate,
+FFirstUnitRate,FSecondUnitRate,FIsManage,FManageType,FLenDecimal,FCubageDecimal,FWeightDecimal,FIsCharSourceItem,FCtrlType,
+FCtrlStraregy,FContainerName,FKanBanCapability,FBatchSplitDays,FBatchSplit,FDefaultReadyLoc,FSPIDReady,FStartService,
+FMakeFile,FIsFix,FTtermOfService,FTtermOfUsefulTime,FIsFixedReOrder,FOnlineShopPNo,FOnlineShopPName,FForbbitBarcodeEdit,
+FDSManagerID,FUnitPackageNumber,FOrderDept,FAuxInMrpCal,FProductDesigner,FShortNumber,FNumber,FName,FParentID,FItemID) 
+
+VALUES (NULL,NULL,0,1,0,248,249,249,249,249,249,0,'0',0,0,0,4,'0','1000','0',341,0,NULL,0,'原材料_knight22',NULL,NULL,0,
+'0',1,'0',1,'0',1,0,'0','0','0',0,0,0,0,0,0,0,0,'0','0','0','0','0','0','0','0',76,'0',2,1000,1000,1000,0,0,0,'17',0,0,1,
+NULL,321,14036,331,0,0,0,0,'1','10000','1','0','0','1',1,1,0,0,0,0,0,0,0,0,'0',1,0,NULL,0,'0','0',0,'0','0','0','0',0,'0',
+'0',0,0,0,'1','0','0','0','0','0',0,'0',0,0,0,0,0,0,352,352,352,352,352,352,352,0,0,0,9999,0,0,0,NULL,NULL,NULL,0,'0',NULL,
+NULL,'0','0','0','0',0,0,2,4,2,0,14039,0,NULL,1,0,0,0,0,0,0,0,0,0,1,NULL,NULL,0,0,0,0,0,0,'116543','1.116543','uytr',273,351
+go
+Update t_ICItem Set FModel='' Where FItemID=351
+go
+
+go
+
+go
+select FUserID from t_Group where FUserID = 16394 and FGroupID = 1
+go
+
+go
+
+go
+Select FDataVokeType,FPrimaryGroup From t_user Where FUserID =16394
+go
+SET NO_BROWSETABLE ON
+go
+SET FMTONLY ON Select FDataVokeType,FPrimaryGroup From t_user WHERE 1=2  SET FMTONLY OFF
+go
+SET FMTONLY ON Select FDataVokeType,FPrimaryGroup From t_user WHERE 1=2  SET FMTONLY OFF
+go
+SET NO_BROWSETABLE OFF
+go
+Select FDataVokeType From t_user Where FUserID =1
+go
+ Insert Into t_ItemRight (FTypeID,FUserID,FItemID)  select fitemclassid,fuserid,351 from t_useritemclassright where (( FUserItemClassRight &  8)=8) and fitemclassid=4 and fuserid<>16394
+go
+
+go
+
+go
+exec sp_executesql N'Select FValue From t_SystemProfile Where FCategory = @P1 And FKey = @P2',N'@P1 varchar(30),@P2 varchar(30)','Base','ItemAutoCheckAfterSave'
+go
+Select FName,FName_CHT,FName_EN From t_ItemClass Where FItemClassID = 4
+go
+
+go
+
+go
+select count(1) as recordcount  from syscolumns where id=(select id from sysobjects where name='t_log')
+go
+INSERT INTO t_Log (FDate,FUserID,FFunctionID,FStatement,FDescription,FMachineName,FIPAddress) VALUES (getdate(),16394,'A00701',5,'新建核算项目:1.116543 核算项目类别:物料','WIN-82SQ48B005I','192.168.10.136')
+go
+
+go
+Select * from t_BaseProperty Where FTypeID = 3 And FItemID = 351
+go
+SET NO_BROWSETABLE ON
+go
+SET FMTONLY ON Select * from t_BaseProperty WHERE 1=2  SET FMTONLY OFF
+go
+SET FMTONLY ON Select * from t_BaseProperty WHERE 1=2  SET FMTONLY OFF
+go
+SET NO_BROWSETABLE OFF
+go
+Insert Into t_BaseProperty(FTypeID, FItemID, FCreateDate, FCreateUser, FLastModDate, FLastModUser, FDeleteDate, FDeleteUser)Values(3, 351, '2017-11-29 18:37:48', 'administrator', Null, Null, Null, Null)
+go
+
+go
+
+go
+
+go
+
+go
+Select FAccessType,FAccessColName,FAccessTable,FUsed  from t_AccessRowData where FType=1 and FClassID=4
+go
+Select top 1 FValue from t_SystemProfile where FCategory='BOS' and FKey='AccessDataNumber'
+go
+ Select * from t_DataTypeRight where FType=1  and FClassID=4
+go
+Delete from Access_t_ICItem where FItemID=351
+ Insert into Access_t_ICItem(FItemID,FParentIDX,FDataAccessView,FDataAccessEdit,FDataAccessDelete)
+ Values(351,273,convert(varbinary(7200),REPLICATE(char(255),100)),convert(varbinary(7200),REPLICATE(char(255),100)),convert(varbinary(7200),REPLICATE(char(255),100)))
+go
+
+go
+
+go
+delete from  t_gr_itemcontrol where FItemID=351 and FItemClassID=4
+insert into t_gr_itemcontrol(FFrameWorkID,FItemClassID,FItemID,FCanUse,FCanAdd,FCanModi,FCanDel)
+select FFrameWorkID,FItemClassID,351,FCanUse,FCanAdd,FCanModi,FCanDel
+from t_gr_itemcontrol where FItemID=273 and FItemClassID=4
+go
+update t_Item set FName=FName where FItemID=351 and FItemClassID=4
+go
+UPDATE t1  SET t1.FFullName = t2.FFullName FROM t_ICItemBase t1 INNER JOIN t_Item t2 ON t1.FItemID = t2.FItemID AND t2.FItemID =351
+go
+
+go
+select i.* from t_Item i where i.FItemID = 351
+go
+
+go
+SELECT FValue FROM t_SystemProfile WHERE FCategory='Base' AND FKey='ItemClassID_4'
+go
+
+go
+
+go
+select FUserID from t_Group where FUserID = 16394 and FGroupID = 1
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+
+go
+select FUserID from t_Group where FUserID = 16394 and FGroupID = 1
+go
+select FSQLTableName, FVersion from t_ItemClass where FItemClassID = 4
+go
+select * from t_ICItem where FItemID = 351
+go
+
+go
+SELECT FItemID FROM t_icitem WHERE FNumber='1.116543'
+go
+
+go
+
+go
+
+go
+
+go
+exec sp_executesql N'select FValue, FReadonly from t_SystemProfile where FCategory = @P1 and FKey = @P2',N'@P1 varchar(30),@P2 varchar(30)','Base','Suspend'
+go
+
+go
+
+go
+INSERT INTO t_SuspendWorkPushQueue(FPushTypeID,FBillTypeID,FInterID,FEntryID,FStatus,FExtInfo)
+VALUES (30401,1017,351,0,0,'Number=1.116543')
+go
+
+go
+
+go
+IF EXISTS(select TOP 1 1 from ICInventory where FAuxPropID>0)
+INSERT INTO t_Log(FDate,FUserID,FFunctionID,FStatement,FDescription)
+VALUES(GETDATE(),16394,'K910008',3,'')
+IF EXISTS(SELECT TOP 1 1 FROM t_ICItem WHERE FAuxInMrpCal>0)
+INSERT INTO t_Log(FDate,FUserID,FFunctionID,FStatement,FDescription)
+VALUES(GETDATE(),16394,'K910007',3,'')
+go
+
+go
+
+go
+
+go
+
+go
+SELECT TOP 100 FID,FPushTypeID,FBillTypeID,FInterID,FEntryID,FStatus,FExtInfo
+FROM t_SuspendWorkPushQueue WITH(NOLOCK)
+ORDER BY FID ASC
+go
+
+go
+
+go
